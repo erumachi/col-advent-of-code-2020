@@ -36,6 +36,7 @@
 
 (in-package :day-1)
 
+;; Actual challenge
 (defun christmas-shopping (balls cookies month tree-ordered)
   "Given the order, return true if it's correct,
   false otherwise"
@@ -46,9 +47,27 @@
    (if (= 11 month) (not tree-ordered) t) ;; - If order placed in november, it can't have a tree, otherwise return true
    (if tree-ordered (<= cookies 48) (<= cookies 24))))  ;; - If the tree is in the order, cookies are 48 max, otherwise they're 24 max
 
+;; Helper for printing booleans
+(defun bool-to-str (b)
+  (if b "true" "false"))
+
+;; Helper to print a test's input and result
+(defun execute-test (balls cookies month tree-ordered)
+  (progn
+    (format t "B = ~d~%" balls)
+    (format t "C = ~d~%" cookies)
+    (format t "M = ~d~%" month)
+    (format t "T = ~A~%" (bool-to-str tree-ordered))
+    (format t "return: ~A~%" (bool-to-str (christmas-shopping balls cookies month tree-ordered)))
+    0))
+
+;; Main entry point. It just runs the tests
 (defun -main ()
   "Entry point of the challenge"
   (progn
-    (format t "B = ~d" 6)
-    (print "Hello world!")
+    (execute-test 6 6 10 t)
+    (format t "~%")
+    (execute-test 13 7 11 nil)
+    (format t "~%")
+    (execute-test 18 30 12 t)
     0))
