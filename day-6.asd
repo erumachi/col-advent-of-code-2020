@@ -1,4 +1,4 @@
-;;;; day-5.asd
+;;;; day-6.asd
 
 (asdf:defsystem #:day-6
   :description "Day 6 of CoL advent of code 2020"
