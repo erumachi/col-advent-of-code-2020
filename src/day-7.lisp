@@ -19,7 +19,7 @@
   (:use #:cl)
   (:export
    #:-main
-   #:)
+   #:randomness)
   )
 
 (in-package :day-7)
