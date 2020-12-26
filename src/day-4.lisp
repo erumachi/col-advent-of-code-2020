@@ -28,7 +28,7 @@
   (:use #:cl)
   (:export
    #:-main
-   #:hot-off-the-press)
+   #:a-perfect-fit)
   )
 
 (in-package :day-4)

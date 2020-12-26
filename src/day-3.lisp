@@ -19,7 +19,7 @@
   (:use #:cl)
   (:export
    #:-main
-   #:hot-off-the-press)
+   #:a-lot-at-stake)
   )
 
 (in-package :day-3)
